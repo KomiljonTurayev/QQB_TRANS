@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layoutContent"
-    android:background="@drawable/back"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
 
     <TextView
         android:id="@+id/introText"
@@ -27,11 +27,11 @@
         android:id="@+id/infoIntro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:alpha="0.9"
         android:background="@android:color/transparent"
         android:gravity="center"
-        android:layout_margin="15dp"
         android:paddingTop="30dp"
-        android:alpha="0.9"
         android:text="Donec Facilisis tortor ut augue lacinia, \n at viverra est semper"
         android:textColor="#fff"
         android:textSize="18sp"
@@ -50,6 +50,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/introText" />
+
     <ImageButton
         android:id="@+id/back"
         android:layout_width="wrap_content"
@@ -71,4 +72,4 @@
         app:layout_constraintRight_toRightOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

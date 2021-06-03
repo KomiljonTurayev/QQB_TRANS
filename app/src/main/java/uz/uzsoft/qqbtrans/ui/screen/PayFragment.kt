@@ -7,22 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import uz.uzsoft.qqbtrans.R
 
-class HomeFragment : Fragment() {
-
+class PayFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_pay, container, false)
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-//        view.txtRegistration
-    }
-
 
 }

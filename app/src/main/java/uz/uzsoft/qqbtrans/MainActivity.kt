@@ -1,4 +1,4 @@
-package uz.uzsoft.qqbtrans.ui.screen
+package uz.uzsoft.qqbtrans
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
