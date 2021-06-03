@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/qqb_mobile"
-    app:startDestination="@id/nav_home">
+    app:startDestination="@id/nav_splash">
 
     <fragment
         android:id="@+id/nav_home"
@@ -15,4 +15,39 @@
         android:name="uz.uzsoft.qqbtrans.AuthFragment"
         android:label="fragment_auth"
         tools:layout="@layout/fragment_auth" />
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="uz.uzsoft.qqbtrans.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="uz.uzsoft.qqbtrans.ui.screen.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/nav_pay"
+        android:name="uz.uzsoft.qqbtrans.ui.screen.PayFragment"
+        android:label="fragment_pay"
+        tools:layout="@layout/fragment_pay" />
+    <fragment
+        android:id="@+id/nav_trans"
+        android:name="uz.uzsoft.qqbtrans.ui.screen.TransFragment"
+        android:label="fragment_trans"
+        tools:layout="@layout/fragment_trans" />
+    <fragment
+        android:id="@+id/nav_monitoring"
+        android:name="uz.uzsoft.qqbtrans.ui.screen.MonitoringFragment"
+        android:label="fragment_monitoring"
+        tools:layout="@layout/fragment_monitoring" />
+    <fragment
+        android:id="@+id/nav_more"
+        android:name="uz.uzsoft.qqbtrans.ui.screen.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/nav_splash"
+        android:name="uz.uzsoft.qqbtrans.ui.screen.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
 </navigation>

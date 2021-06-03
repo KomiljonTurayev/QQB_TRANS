@@ -14,9 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/shape"
             android:orientation="vertical"
             android:padding="15dp"
@@ -56,14 +56,13 @@
                     app:mask="+998 ** *** ** **"
                     app:notMaskedSymbol="*" />
 
-
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/reg"
-            android:layout_width="match_parent"
+            android:layout_width="270dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginLeft="16dp"
