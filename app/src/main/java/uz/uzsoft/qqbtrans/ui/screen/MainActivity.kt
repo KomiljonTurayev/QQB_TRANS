@@ -1,8 +1,9 @@
-package uz.uzsoft.qqbtrans
+package uz.uzsoft.qqbtrans.ui.screen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import uz.uzsoft.qqbtrans.R
 
 class MainActivity : AppCompatActivity() {
     lateinit var qqb:String
