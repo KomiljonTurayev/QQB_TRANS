@@ -27,29 +27,32 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Executors.newSingleThreadExecutor().execute {
             Thread.sleep(5000)
-//            if (storage.getRemember()) {
+            if (storage.getRemember()) {
 ////                runOnUiThread {
-//                openCard()
-////            }
-//            } else {
+                openLogin()
+//            }
+            } else {
 ////                runOnUiThread {
 //                openLogin()
 //            findNavController().navigate(R.id.nav_registration)
 //            findNavController().popBackStack(R.id.nav_registration, false)
-            Log.d("TTT", "splash else")
-            openCard()
+                Log.d("TTT", "splash else")
+                openRegis()
 //            }
 //            }
+            }
         }
     }
 
 
-    private fun openCard() {
+    private fun openRegis() {
 //        fragmentManager.beginTransaction()
 //            .replace(R.id.nav_host_fragment,)
 //            //  .addToBackStack(null) remove this line
 //            .commit();
 //        findNavController().navigate(R.id.nav_login)
+
+
     }
 
     private fun openLogin() {

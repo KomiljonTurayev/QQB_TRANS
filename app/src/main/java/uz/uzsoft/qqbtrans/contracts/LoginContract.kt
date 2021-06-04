@@ -6,7 +6,7 @@ interface LoginContract {
     interface Model{
         fun message(block: SingleBlock<String>)
         fun success(block: SingleBlock<String>)
-        fun login(data: LoginData)
+//        fun login(data: LoginData)
         fun setToken(token:String)
     }
     interface View{

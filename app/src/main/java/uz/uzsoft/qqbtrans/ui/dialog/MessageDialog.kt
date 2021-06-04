@@ -6,10 +6,12 @@ import androidx.appcompat.app.AlertDialog
 import uz.uzsoft.qqbtrans.R
 import uz.uzsoft.qqbtrans.databinding.DialogMessageBinding
 
+//import uz.uzsoft.qqbtrans.databinding.DialogMessageBinding
+
 
 class MessageDialog(context: Context, pos: Int, message: String) :
     AlertDialog(context) {
-    private val binding=DialogMessageBinding.inflate(LayoutInflater.from(context), null,false)
+    private val binding= DialogMessageBinding.inflate(LayoutInflater.from(context), null,false)
 
     init {
         setView(binding.root)
