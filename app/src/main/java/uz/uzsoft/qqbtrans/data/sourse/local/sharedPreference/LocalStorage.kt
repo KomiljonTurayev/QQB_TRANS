@@ -2,7 +2,7 @@ package uz.uzsoft.qqbtrans.data.sourse.local.sharedPreference
 
 import android.content.Context
 import android.content.SharedPreferences
-import uz.dilnoza.finalpayme.app.App
+import uz.uzsoft.qqbtrans.app.App
 
 
 class LocalStorage(context: Context) {

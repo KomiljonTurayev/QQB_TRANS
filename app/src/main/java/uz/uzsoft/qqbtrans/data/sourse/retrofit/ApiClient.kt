@@ -5,8 +5,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import uz.dilnoza.finalpayme.app.App
-import uz.dilnoza.finalpayme.sourse.local.shared.LocalStorage
+
 import uz.uzsoft.qqbtrans.app.App
 import uz.uzsoft.qqbtrans.data.sourse.local.sharedPreference.LocalStorage
 
