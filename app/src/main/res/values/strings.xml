@@ -2,4 +2,11 @@
     <string name="app_name">QQB TRANS</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main">Asosiy</string>
+    <string name="paid">To\'lovlar</string>
+    <string name="trans">O\'tkazma</string>
+    <string name="monitoring">Monitoring</string>
+    <string name="more">Ko\'proq</string>
+
+
 </resources>
