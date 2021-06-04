@@ -6,7 +6,7 @@ interface RegistrationContract {
     interface Model{
         fun message(block: SingleBlock<String>)
         fun success(block: SingleBlock<String>)
-        fun register(data: ContactUserData)
+        //fun register(data: ContactUserData)
     }
     interface View{
         fun getPhoneNumber(): String

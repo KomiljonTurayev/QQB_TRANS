@@ -25,7 +25,13 @@ class LocalStorage(context: Context) {
         editor.apply()
     }
 
-    fun getToken(): String? = pref.getString("TOKEN", "")
+    fun getToken(): String? = pref.getString("TOKEN_UUID", "")
+    fun setTokenUuid(token: String?) {
+        editor.putString("TOKEN_UUID", token)
+        editor.apply()
+    }
+
+    fun getTokenUuid(): String? = pref.getString("TOKEN_UUID", "")
     fun setRemember(rem: Boolean) {
         editor.putBoolean("REMEMBER", rem)
         editor.apply()
