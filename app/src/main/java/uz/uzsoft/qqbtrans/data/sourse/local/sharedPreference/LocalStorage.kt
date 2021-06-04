@@ -26,10 +26,12 @@ class LocalStorage(context: Context) {
     }
 
     fun getToken(): String? = pref.getString("TOKEN", "")
+
     fun setRemember(rem: Boolean) {
         editor.putBoolean("REMEMBER", rem)
         editor.apply()
     }
+
     fun getRemember():Boolean=pref.getBoolean("REMEMBER",false)
 
 }

@@ -25,11 +25,14 @@ class SplashFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val counter: Boolean = storage.getRemember()
+
         Executors.newSingleThreadExecutor().execute {
             Thread.sleep(5000)
-            if (storage.getRemember()) {
+            if (counter) {
 ////                runOnUiThread {
                 openLogin()
+                Log.d("TTT", "splash if")
 //            }
             } else {
 ////                runOnUiThread {
@@ -60,6 +63,6 @@ class SplashFragment : Fragment() {
 //            .replace(R.id.fragmentLayout, IntroFragment(), "Intro")
 //            .commit()
 //    }
-        findNavController().navigate(R.id.nav_registration)
+//        findNavController().navigate(R.id.nav_registration)
     }
 }
