@@ -24,10 +24,6 @@ class Adapter(
         putInt("COLOR",color[position])
         putString("INFO",info[position])
     }
-    fun setNext(block:(Int)->Unit){
-        listenerNext=block
-    }
-    fun setBack(block:(Int)->Unit){
-        listenerBack=block
-    }
+    fun setNext(block:(Int)->Unit){ listenerNext=block }
+    fun setBack(block:(Int)->Unit){ listenerBack=block }
 }

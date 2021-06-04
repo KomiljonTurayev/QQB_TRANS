@@ -7,7 +7,7 @@ import uz.uzsoft.qqbtrans.R
 import uz.uzsoft.qqbtrans.databinding.DialogMessageBinding
 
 
-class MessageDialog(context: Context, private val pos: Int, private val message: String) :
+class MessageDialog(context: Context, pos: Int, message: String) :
     AlertDialog(context) {
     private val binding=DialogMessageBinding.inflate(LayoutInflater.from(context), null,false)
 
@@ -29,7 +29,6 @@ class MessageDialog(context: Context, private val pos: Int, private val message:
             }
         }
         binding.message.text = message
-
     }
 
 }
