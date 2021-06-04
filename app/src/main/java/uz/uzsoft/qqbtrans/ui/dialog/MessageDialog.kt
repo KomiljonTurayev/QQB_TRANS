@@ -4,31 +4,31 @@ import android.content.Context
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import uz.uzsoft.qqbtrans.R
+import uz.uzsoft.qqbtrans.databinding.DialogMessageBinding
 
 
 class MessageDialog(context: Context, private val pos: Int, private val message: String) :
     AlertDialog(context) {
-    private val contentView =
-        LayoutInflater.from(context).inflate(R.layout.dialog_message, null, false)
+    private val binding=DialogMessageBinding.inflate(LayoutInflater.from(context), null,false)
 
     init {
-        setView(contentView)
+        setView(binding.root)
         when (pos) {
             0 -> {
-                contentView.title.text = "Error!"
-                contentView.image.setBackgroundResource(R.drawable.wrong)
+                binding.title.text = "Error!"
+                binding.image.setBackgroundResource(R.drawable.wrong)
             }
             1 -> {
-                contentView.title.text = "Success!"
-               contentView.image.setBackgroundResource(R.drawable.correct)
+                binding.title.text = "Success!"
+               binding.image.setBackgroundResource(R.drawable.correct)
             }
             2 -> {
-                contentView.title.text = "Congratulation!"
-                contentView.title.textSize=18F
-                contentView.image.setBackgroundResource(R.drawable.congratulation)
+                binding.title.text = "Congratulation!"
+                binding.title.textSize=18F
+                binding.image.setBackgroundResource(R.drawable.congratulation)
             }
         }
-        contentView.message.text = message
+        binding.message.text = message
 
     }
 
