@@ -1,37 +1,36 @@
 package uz.uzsoft.qqbtrans.ui.screen
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import uz.uzsoft.qqbtrans.R
 import uz.uzsoft.qqbtrans.data.sourse.local.sharedPreference.LocalStorage
-import java.util.concurrent.Executors
+import uz.uzsoft.qqbtrans.databinding.FragmentSplashBinding
 
-class SplashFragment : Fragment() {
 
+class SplashFragment : Fragment(R.layout.fragment_splash) {
+
+    private val binding by viewBinding(FragmentSplashBinding::bind)
     private var storage = LocalStorage.getInstance()
-    private var executor = Executors.newSingleThreadExecutor()
-    private var handle = Handler(Looper.getMainLooper())
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         val counter: Boolean = storage.getRemember()
 
+        Log.d("TTT", "splash if $counter")
+
+//        Executors.newSingleThreadExecutor().execute {
+//            Thread.sleep(5000)
+//            if (counter) {
+//                openLogin()
+//                Log.d("TTT", "splash if")
+//            } else {
+//                Log.d("TTT", "splash else")
+//                openRegis()
+//            }
+//        }
         val imageSplash = view.findViewById<ImageView>(R.id.imageSplash)
 
         imageSplash.setOnClickListener {
@@ -56,6 +55,7 @@ class SplashFragment : Fragment() {
         }
     }
 
+
     private fun openRegis() {
 //        fragmentManager.beginTransaction()
 //            .replace(R.id.nav_host_fragment,)
@@ -71,6 +71,6 @@ class SplashFragment : Fragment() {
 //            .replace(R.id.fragmentLayout, IntroFragment(), "Intro")
 //            .commit()
 //    }
-        findNavController().navigate(R.id.nav_registration)
+        findNavController().navigate(R.id.nav_login)
     }
 }

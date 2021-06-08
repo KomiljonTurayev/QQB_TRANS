@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import uz.uzsoft.qqbtrans.R
 
 class LoginFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,13 +22,11 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val registration = view.findViewById<TextView>(R.id.registration)
 
+        val registration = view.findViewById<TextView>(R.id.registration)
         registration.setOnClickListener {
-            Toast.makeText(view.context, "Registration", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.nav_registration)
         }
-
 //        view.txtRegistration
     }
 

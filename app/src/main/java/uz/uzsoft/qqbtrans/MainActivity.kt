@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_main->{
                     navView.isGone = false
                 }
+    R.id.nav_login->{
+                    navView.isGone = true
+                }
+
+
 
 
             }
