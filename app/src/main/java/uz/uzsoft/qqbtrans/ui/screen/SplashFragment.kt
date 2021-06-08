@@ -2,49 +2,35 @@ package uz.uzsoft.qqbtrans.ui.screen
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.commit
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import uz.uzsoft.qqbtrans.sourse.local.shared.LocalStorage
+import by.kirich1409.viewbindingdelegate.viewBinding
 import uz.uzsoft.qqbtrans.R
-import java.util.concurrent.Executors
+import uz.uzsoft.qqbtrans.data.sourse.local.sharedPreference.LocalStorage
+import uz.uzsoft.qqbtrans.databinding.FragmentSplashBinding
 
-class SplashFragment : Fragment() {
 
+class SplashFragment : Fragment(R.layout.fragment_splash) {
+
+    private val binding by viewBinding(FragmentSplashBinding::bind)
     private var storage = LocalStorage.getInstance()
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         val counter: Boolean = storage.getRemember()
 
-        Executors.newSingleThreadExecutor().execute {
-            Thread.sleep(5000)
-            if (counter) {
-////                runOnUiThread {
-                openLogin()
-                Log.d("TTT", "splash if")
-//            }
-            } else {
-////                runOnUiThread {
+        Log.d("TTT", "splash if $counter")
+
+//        Executors.newSingleThreadExecutor().execute {
+//            Thread.sleep(5000)
+//            if (counter) {
 //                openLogin()
-//            findNavController().navigate(R.id.nav_registration)
-//            findNavController().popBackStack(R.id.nav_registration, false)
-                Log.d("TTT", "splash else")
-                openRegis()
+//                Log.d("TTT", "splash if")
+//            } else {
+//                Log.d("TTT", "splash else")
+//                openRegis()
 //            }
-//            }
-            }
-        }
+//        }
     }
 
 
@@ -63,6 +49,6 @@ class SplashFragment : Fragment() {
 //            .replace(R.id.fragmentLayout, IntroFragment(), "Intro")
 //            .commit()
 //    }
-//        findNavController().navigate(R.id.nav_registration)
+        findNavController().navigate(R.id.nav_login)
     }
 }

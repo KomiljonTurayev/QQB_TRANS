@@ -1,3 +1,3 @@
 package uz.uzsoft.qqbtrans.data.data
 
-data class AuthData(val phone:String)
+data class UserData(val phone:String)

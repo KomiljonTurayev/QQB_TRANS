@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_main, R.id.nav_trans, R.id.nav_pay, R.id.nav_more, R.id.nav_monitoring
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_main->{
                     navView.isGone = false
                 }
+    R.id.nav_login->{
+                    navView.isGone = true
+                }
+
+
 
 
             }
