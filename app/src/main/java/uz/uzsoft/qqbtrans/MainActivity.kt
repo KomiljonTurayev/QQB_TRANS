@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_main, R.id.nav_trans, R.id.nav_pay, R.id.nav_more, R.id.nav_monitoring
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
