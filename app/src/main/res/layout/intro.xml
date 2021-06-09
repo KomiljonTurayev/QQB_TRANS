@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/lay"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.viewpager2.widget.ViewPager2
@@ -12,17 +12,19 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLay"
-        app:tabIndicatorColor="@color/cardview_shadow_start_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:tabBackground="@drawable/tab_def"
         app:tabGravity="center"
+        android:background="#00FFFFFF"
         app:tabIndicator="@drawable/tab_s"
+        app:tabIndicatorColor="@color/cardview_shadow_start_color"
         app:tabIndicatorGravity="center"
         app:tabMode="fixed"
         app:tabPaddingEnd="6dp"

@@ -17,4 +17,5 @@ class PayFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_pay, container, false)
     }
 
+//    10 53
 }

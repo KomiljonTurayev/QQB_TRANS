@@ -7,27 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import uz.uzsoft.qqbtrans.R
+import uz.uzsoft.qqbtrans.databinding.FragmentLoginBinding
+//import uz.uzsoft.qqbtrans.databinding.LoginFragmentBinding
 
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(R.layout.fragment_login) {
 
+    private val binding by viewBinding(FragmentLoginBinding::bind)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val registration = view.findViewById<TextView>(R.id.registration)
-        registration.setOnClickListener {
+        binding.registration.setOnClickListener {
             findNavController().navigate(R.id.nav_registration)
         }
-//        view.txtRegistration
+
     }
 
 

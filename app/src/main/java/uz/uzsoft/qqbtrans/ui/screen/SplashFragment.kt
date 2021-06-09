@@ -3,12 +3,15 @@ package uz.uzsoft.qqbtrans.ui.screen
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import uz.uzsoft.qqbtrans.R
 import uz.uzsoft.qqbtrans.data.sourse.local.sharedPreference.LocalStorage
 import uz.uzsoft.qqbtrans.databinding.FragmentSplashBinding
+import java.util.concurrent.Executors
 
 
 class SplashFragment : Fragment(R.layout.fragment_splash) {
@@ -31,6 +34,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 //                openRegis()
 //            }
 //        }
+
         val imageSplash = view.findViewById<ImageView>(R.id.imageSplash)
 
         imageSplash.setOnClickListener {
@@ -41,6 +45,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
             Thread.sleep(2000)
             if (counter) {
                 activity?.runOnUiThread {
+                    findNavController().popBackStack()
                     openLogin()
                     Log.d("TTT", "splash if")
                 }
@@ -48,7 +53,8 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
                 activity?.runOnUiThread {
                     openLogin()
                     Log.d("TTT", "splash else")
-                    openRegis()
+                    findNavController().popBackStack()
+                    openIntro()
 
                 }
             }
@@ -56,13 +62,13 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
     }
 
 
-    private fun openRegis() {
+    private fun openIntro() {
 //        fragmentManager.beginTransaction()
 //            .replace(R.id.nav_host_fragment,)
 //            //  .addToBackStack(null) remove this line
 //            .commit();
-        findNavController().navigate(R.id.nav_login)
-
+        findNavController().popBackStack()
+        findNavController().navigate(R.id.nav_intro)
 
     }
 
@@ -71,6 +77,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 //            .replace(R.id.fragmentLayout, IntroFragment(), "Intro")
 //            .commit()
 //    }
+        findNavController().popBackStack()
         findNavController().navigate(R.id.nav_login)
     }
 }

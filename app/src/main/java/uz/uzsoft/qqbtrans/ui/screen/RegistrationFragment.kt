@@ -7,21 +7,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.github.pinball83.maskededittext.MaskedEditText
 import uz.uzsoft.qqbtrans.R
+import uz.uzsoft.qqbtrans.databinding.FragmentRegistrationBinding
 
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
 
+    private val binding by viewBinding(FragmentRegistrationBinding::bind)
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val btnReg = view.findViewById<Button>(R.id.btnReg)
-        val phone_number = view.findViewById<MaskedEditText>(R.id.phone_number)
+//        val btnReg = view.findViewById<Button>(R.id.btnReg)
+//        val phone_number = view.findViewById<MaskedEditText>(R.id.phone_number)
 
-        btnReg.setOnClickListener {
+               
+        binding.btnReg.setOnClickListener {
 
-            Log.d("TTT", "${phone_number.text}")
+            Log.d("TTT", "${ binding.phoneNumber.text}")
 
-            if (phone_number.textSize > 10) {
-                Log.d("TTT", "${phone_number.text} _2")
+            if ( binding.phoneNumber.textSize > 10) {
+                Log.d("TTT", "${ binding.phoneNumber.text} _2")
 
             }
         }
